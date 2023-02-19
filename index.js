@@ -4,6 +4,9 @@ const { postRoute } = require("./routes/post.routes")
 const { connection } = require("./config/db")
 
 const app = express()
+app.get("/",(req,res)=>{
+    res.send("This is homepage")
+})
 app.use(express.json())
 app.use("/data", postRoute)
 
